@@ -24,14 +24,11 @@ public class adfgvx {
         String encryptedMessage;
         String cle = "MARCEL";
         
-        table = initTable();
-        
+        table = initTable();        
         encryptedMessage = substitue(message, table);
         encryptedMessage = transposition(cle, encryptedMessage);
         
         System.out.println(encryptedMessage);
-        
-        
         
 
     }
