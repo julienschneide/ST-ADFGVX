@@ -26,7 +26,9 @@ public class adfgvx {
         
         table = initTable();
         
-        encryptedMessage = encrypt(message);
+        encryptedMessage = encrypt(message, table);
+        
+        System.out.println(encryptedMessage);
         
         
         
@@ -81,9 +83,20 @@ public class adfgvx {
         return tempTable;
     }
     
-    private static String encrypt(String message){
+    private static String encrypt(String message, Map<String, Character> table){
+        String encrpytedMessage = "";
         
-        return "-";
+        message = message.trim();
+        //System.out.println(message.length());
+        for(int i=0; i<message.length(); i++){
+            for(String c : table.keySet()){
+                if(table.get(c) == message.charAt(i)){
+                    
+                    encrpytedMessage = encrpytedMessage + c ;
+                }
+            }
+        }
+        return encrpytedMessage;
     }
     
     private static String decrypt(String message){
