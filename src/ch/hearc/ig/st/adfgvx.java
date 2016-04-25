@@ -19,13 +19,13 @@ public class adfgvx {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        //Map<String, Character> table = new HashMap<>();
-        //table = initTable();
+        Map<String, Character> table = new HashMap<>();
+        table = initTable();
         
-        //System.out.println(table.get("AA"));
+        System.out.println(table.get("AA"));
 
     }
-    /*
+    
     private static Map<String, Character> initTable(){
         
         Map<String, Character> tempTable = new HashMap<>();
@@ -74,6 +74,6 @@ public class adfgvx {
                 
         return tempTable;
         
-    }*/
+    }
     
 }
