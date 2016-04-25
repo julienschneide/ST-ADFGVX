@@ -20,14 +20,20 @@ public class adfgvx {
      */
     public static void main(String[] args) {
         Map<String, Character> table = new HashMap<>();
+        String message = "objectif arras 15h28";
+        String encryptedMessage;
+        String cle;
+        
         table = initTable();
         
-        System.out.println(table.get("AA"));
+        encryptedMessage = encrypt(message);
+        
+        
+        
 
     }
     
-    private static Map<String, Character> initTable(){
-        
+    private static Map<String, Character> initTable(){     
         Map<String, Character> tempTable = new HashMap<>();
         
         tempTable.put("AA", 'c');
@@ -73,7 +79,15 @@ public class adfgvx {
         tempTable.put("VX", '9');
                 
         return tempTable;
+    }
+    
+    private static String encrypt(String message){
         
+        return "-";
+    }
+    
+    private static String decrypt(String message){
+        return "-";
     }
     
 }
