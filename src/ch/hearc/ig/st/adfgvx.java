@@ -22,11 +22,12 @@ public class adfgvx {
         Map<String, Character> table = new HashMap<>();
         String message = "objectif arras 15h28";
         String encryptedMessage;
-        String cle;
+        String cle = "MARCEL";
         
         table = initTable();
         
-        encryptedMessage = encrypt(message, table);
+        encryptedMessage = substitue(message, table);
+        encryptedMessage = transposition(cle, encryptedMessage);
         
         System.out.println(encryptedMessage);
         
@@ -83,11 +84,10 @@ public class adfgvx {
         return tempTable;
     }
     
-    private static String encrypt(String message, Map<String, Character> table){
+    private static String substitue(String message, Map<String, Character> table){
         String encrpytedMessage = "";
         
         message = message.trim();
-        //System.out.println(message.length());
         for(int i=0; i<message.length(); i++){
             for(String c : table.keySet()){
                 if(table.get(c) == message.charAt(i)){
@@ -97,6 +97,11 @@ public class adfgvx {
             }
         }
         return encrpytedMessage;
+    }
+    
+    private static String transposition(String cle, String message){
+        
+        return "-";
     }
     
     private static String decrypt(String message){
